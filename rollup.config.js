@@ -2,11 +2,10 @@ import babel from "@rollup/plugin-babel";
 import resolve from "@rollup/plugin-node-resolve";
 import commonjs from "@rollup/plugin-commonjs";
 import replace from "@rollup/plugin-replace";
-import json from "@rollup/plugin-json";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
-const NODE_ENV = process.env.NODE_ENV || "development";
-const outputFile = NODE_ENV === "production" ? "./lib/prod.js" : "./lib/dev.js";
+const outputFile = "./lib/index.js";
+const NODE_ENV = "production";
 
 const extensions = [".js", ".jsx"];
 
@@ -24,7 +23,6 @@ export default {
   external: ["react", "react-dom", /@babel\/runtime/],
   plugins: [
     peerDepsExternal(),
-    json(),
     replace({
       "process.env.NODE_ENV": JSON.stringify(NODE_ENV),
     }),
