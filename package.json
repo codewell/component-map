@@ -8,7 +8,8 @@
     "build:local": "npm run build && npm pack",
     "storybook": "start-storybook -p 6006 --no-dll",
     "build-storybook": "build-storybook --no-dll",
-    "start": "npm run storybook"
+    "start": "npm run storybook",
+    "format": "prettier \"**/*.{js,jsx}\" --write"
   },
   "devDependencies": {
     "@babel/core": "^7.12.3",

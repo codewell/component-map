@@ -19,8 +19,14 @@ export const Primary = Template.bind({});
 
 Primary.args = {
   component: Foo,
-  data: [{ name: "hello" }, { name: "world" }],
+  data: [
+    { id: 1, name: "hello" },
+    { id: 2, name: "world" },
+  ],
   passProperties: {
     commonProp1: "commonProp1",
+  },
+  keyFunction: (props, index) => {
+    return props.id + index;
   },
 };
