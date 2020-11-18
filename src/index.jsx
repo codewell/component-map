@@ -4,7 +4,7 @@ const wrapComponentProperties = (passProperties, Component, keyFunction) => (
   props,
   index,
 ) => (
-  <Component key={keyFunction(props, index)} {...props} {...passProperties} />
+  <Component key={keyFunction(props, index)} mappingIndex={index} {...props} {...passProperties} />
 );
 
 const ComponentMap = ({ data, component, passProperties, keyFunction }) =>
