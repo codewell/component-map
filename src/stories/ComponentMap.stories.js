@@ -6,9 +6,9 @@ export default {
   component: ComponentMap,
 };
 
-const Foo = ({ name, commonProp1 }) => (
+const Foo = ({ name, commonProp1, mappingIndex }) => (
   <div>
-    {name} foo - {commonProp1}
+    {mappingIndex}. {name} foo - {commonProp1}
   </div>
 );
 
