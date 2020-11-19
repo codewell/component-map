@@ -1,13 +1,13 @@
 import React from "react";
 
-const wrapComponentProperties = (passProperties, Component, keyFunction) => (
+const wrapComponentProperties = (commonProperties, Component, keyFunction) => (
   props,
   index,
 ) => (
-  <Component key={keyFunction(props, index)} mappingIndex={index} {...props} {...passProperties} />
+  <Component key={keyFunction(props, index)} mappingIndex={index} {...props} {...commonProperties} />
 );
 
-const ComponentMap = ({ data, component, passProperties, keyFunction }) =>
-  data.map(wrapComponentProperties(passProperties, component, keyFunction));
+const ComponentMap = ({ data, component, commonProperties, keyFunction }) =>
+  data.map(wrapComponentProperties(commonProperties, component, keyFunction));
 
 export default ComponentMap;

@@ -28,7 +28,7 @@ const Foo = ({ name, commonProp1 }) => (
   // Common properties shared among all
   // the children e.g. state, dispatch
   // and callback functions like onClick
-  passProperties={{
+  commonProperties={{
     commonProp1: "commonProp1",
   }}
 
