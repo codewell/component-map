@@ -23,7 +23,7 @@ Primary.args = {
     { id: 1, name: "hello" },
     { id: 2, name: "world" },
   ],
-  passProperties: {
+  commonProperties: {
     commonProp1: "commonProp1",
   },
   keyFunction: (props, index) => {
